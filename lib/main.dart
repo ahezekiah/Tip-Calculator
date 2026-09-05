@@ -6,6 +6,8 @@ void main() {
 }
 
 class TipCalculatorApp extends StatelessWidget {
+  const TipCalculatorApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,6 +18,8 @@ class TipCalculatorApp extends StatelessWidget {
 }
 
 class TipCalculatorScreen extends StatefulWidget {
+  const TipCalculatorScreen({super.key});
+
   @override
   _TipCalculatorScreenState createState() => _TipCalculatorScreenState();
 }
@@ -84,7 +88,7 @@ class _TipCalculatorScreenState extends State<TipCalculatorScreen>
                     ),
                     prefixIcon: Icon(Icons.attach_money, color: Colors.white),
                     filled: true,
-                    fillColor: Colors.white.withOpacity(0.2),
+                    fillColor: Colors.white.withValues(alpha: 0.2),
                   ),
                   onChanged: (value) {
                     setState(() {
@@ -112,7 +116,7 @@ class _TipCalculatorScreenState extends State<TipCalculatorScreen>
                   icon: Icon(Icons.refresh),
                   label: Text("Reset"),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white.withOpacity(0.2),
+                    backgroundColor: Colors.white.withValues(alpha: 0.2),
                     foregroundColor: Colors.white,
                     textStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     padding: EdgeInsets.symmetric(vertical: 14),
